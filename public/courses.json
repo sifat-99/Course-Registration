@@ -21,7 +21,7 @@
         "course_img": "https://i.ibb.co/m8C5PJB/Rectangle-2-4.png",
         "credit_Hour": 3,
         "course_fee": 600,
-        "course_information": "C++ is a powerful programming language widely used in the field of Data Structures and Algorithms (DSA) due to its efficiency, flexibility, and extensive standard library."
+        "course_information": "C++ empowers DSA with efficiency, flexibility, and a robust standard library."
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "course_img": "https://i.ibb.co/XtryMvK/Rectangle-3.png",
         "credit_Hour": 4,
         "course_fee": 800,
-        "course_information": "Basic data structures are fundamental building blocks in computer science and programming. They are essential for storing, organizing, and manipulating data efficiently."
+        "course_information": "Basic data structures are essential for efficient data storage and manipulation in computer science and programming."
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "course_img": "https://i.ibb.co/PrnWcjQ/Rectangle-2.png",
         "credit_Hour": 3,
         "course_fee": 650,
-        "course_information": "Object-Oriented Programming is a programming paradigm that uses objects and classes to structure and organize code. Python is a versatile and powerful programming language that supports OOP principles."
+        "course_information": "Python, a powerful language, supports OOP, which structures code with objects and classes, enhancing versatility."
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "course_img": "https://i.ibb.co/WcHWWGF/Rectangle-2-5.png",
         "credit_Hour": 4,
         "course_fee": 750,
-        "course_information": "Software Engineering is a systematic and disciplined approach to designing, developing, testing, deploying, and maintaining software systems."
+        "course_information": "Software Engineering is a methodical approach to design, develop, test, deploy, and maintain software systems professionally."
     },
     {
         "id": 7,
