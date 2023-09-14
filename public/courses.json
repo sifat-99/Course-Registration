@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "course_title": "Introduction to C Programming",
+        "course_img": "https://i.ibb.co/Gvcc4jb/Rectangle-2-2.png",
+        "credit_Hour": 3,
+        "course_fee": 1500,
+        "course_information": "C Programming: Versatile language for system software and application development."
+    },
+    {
+        "id": 2,
+        "course_title": "Introduction to Algorithms",
+        "course_img": "https://i.ibb.co/SXRhQ1S/Rectangle-2-3.png",
+        "credit_Hour": 4,
+        "course_fee": 700,
+        "course_information": "Algorithms are fundamental to computer science and play a crucial role in our digital world. "
+    },
+    {
+        "id": 3,
+        "course_title": "Introduction to C++ for DSA",
+        "course_img": "https://i.ibb.co/m8C5PJB/Rectangle-2-4.png",
+        "credit_Hour": 3,
+        "course_fee": 600,
+        "course_information": "C++ is a powerful programming language widely used in the field of Data Structures and Algorithms (DSA) due to its efficiency, flexibility, and extensive standard library."
+    },
+    {
+        "id": 4,
+        "course_title": "Basic Data Structures",
+        "course_img": "https://i.ibb.co/XtryMvK/Rectangle-3.png",
+        "credit_Hour": 4,
+        "course_fee": 800,
+        "course_information": "Basic data structures are fundamental building blocks in computer science and programming. They are essential for storing, organizing, and manipulating data efficiently."
+    },
+    {
+        "id": 5,
+        "course_title": "Introduction to OOP Python",
+        "course_img": "https://i.ibb.co/PrnWcjQ/Rectangle-2.png",
+        "credit_Hour": 3,
+        "course_fee": 650,
+        "course_information": "Object-Oriented Programming is a programming paradigm that uses objects and classes to structure and organize code. Python is a versatile and powerful programming language that supports OOP principles."
+    },
+    {
+        "id": 6,
+        "course_title": "Software Engineering",
+        "course_img": "https://i.ibb.co/WcHWWGF/Rectangle-2-5.png",
+        "credit_Hour": 4,
+        "course_fee": 750,
+        "course_information": "Software Engineering is a systematic and disciplined approach to designing, developing, testing, deploying, and maintaining software systems."
+    },
+    {
+        "id": 7,
+        "course_title": "AWS, Cloud Computing",
+        "course_img": "https://i.ibb.co/h2JC7TX/Rectangle-3-1.png",
+        "credit_Hour": 3,
+        "course_fee": 700,
+        "course_information": "Amazon Web Services (AWS): Leading cloud provider for scalable, on-demand computing."
+    },
+    {
+        "id": 8,
+        "course_title": "Database (MySQL)",
+        "course_img": "https://i.ibb.co/RYNQV82/Rectangle-2-1.png",
+        "credit_Hour": 3,
+        "course_fee": 600,
+        "course_information": "MySQL: Popular open-source relational database for data storage and management."
+    },
+    {
+        "id": 9,
+        "course_title": "Problem-Solving Part",
+        "course_img": "https://i.ibb.co/cyq5LGw/Rectangle-2-6.png",
+        "credit_Hour": 4,
+        "course_fee": 750,
+        "course_information": "Problem-solving: Process of finding solutions through critical thinking and analysis."
+    }
+]
