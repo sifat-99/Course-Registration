@@ -10,16 +10,18 @@ const Course = ({course,handleAddToCart}) => {
             <h2 className=' mt-4 text-lg text-[#1C1B1B] font-semibold'>{course_title}</h2>
             <p className=' mt-3 text-sm text-left text-[#1C1B1B99]'>{course_information}</p>
             <div className='absolute bottom-3 left-3 w-full'>
-            <div className='mt-5 flex justify-between items-center w-3/4 gap-2 text-[#1C1B1B99]'>
+            <div className='mt-5 pl-4 flex justify-between items-center w-3/4 gap-2 text-[#1C1B1B99]'>
                 <p>$ Price: {course_fee}</p>
+                <div className='flex items-center gap-1'>
                 <h1>
                     <BiBookOpen />
                 </h1>
                 <p>Credit: {credit_Hour} hr</p>
+                </div>
             </div>
             <button
             onClick={() => {handleAddToCart(course)}}
-            className='w-11/12 items-center bg-blue-600 text-lg font-semibold py-2 rounded-lg text-white mt-6'>
+            className='w-11/12 items-center bg-blue-600 hover:bg-purple-700  text-lg font-semibold py-2 rounded-lg text-white mt-6'>
                 Select
                 </button>
                 <ToastContainer></ToastContainer>

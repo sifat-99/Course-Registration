@@ -15,15 +15,16 @@ const Cart = ({carts,credit,remainingCreditHour,cost}) => {
             <div className=" text-[20px] font-bold mb-1">
                 Course Name 
                 <div>
-                    <ol className='text-base list-decimal pl-4 font-normal text-[#1C1B1B99] mb-2'>
+                    <ol className='text-base mt-6 grid gap-3 list-decimal pl-4 font-normal text-[#1C1B1B99] mb-2'>
                         {itemList}
                     </ol>
                 </div>
             </div>
-            <h3 className="text-base font-semibold text-[#1C1B1B99]">Total Credit Hour: {credit}
+            <h3 className="text-base  text-black font-bold">Total Credit Hour: <span className='text-[#1C1B1B99] font-semibold'>{credit}</span>
             </h3>
             <hr />
-            <h2 className="text-base font-semibold text-[#1C1B1B99]">Total Price: {cost} USD</h2>
+            <h2 className="text-base font-semibold text-black">Total Price: <span className='text-[#1C1B1B99] font-semibold'>{cost} USD</span></h2>
+            <hr />
             </div> 
         
     );
