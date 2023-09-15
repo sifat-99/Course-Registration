@@ -5,10 +5,19 @@ import { useState } from 'react'
 
 function App() {
 
-  const [cart, setCart] = useState([]);
-  const handleAddToCart = () =>
+  const [carts, setCarts] = useState([]);
+  const [credit, setCredit] = useState(0);
+  const handleAddToCart = course =>
   {
-    console.log('Adding to Cart')
+    // console.log(course)
+    const newCart = [...carts, course];
+    setCarts(newCart);
+  }
+
+  const handleAddTotalCredit = credit_Hour =>
+  {
+    const newCreditHour = credit+credit_Hour;
+      setCredit(newCreditHour);
   }
 
   return (
@@ -19,8 +28,14 @@ function App() {
           </h1>
           </header>
       <main className=' md:flex'>
-      <Courses handleAddToCart={handleAddToCart}></Courses>
-      <Cart></Cart>
+      <Courses 
+      handleAddToCart={handleAddToCart}
+      handleAddTotalCredit={handleAddTotalCredit}
+      ></Courses>
+      <Cart 
+      carts={carts}
+      credit = {credit}
+      ></Cart>
     </main>
     </div>
   )

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import {BiBookOpen} from 'react-icons/bi';
-const Course = ({course,handleAddToCart}) => {
+const Course = ({course,handleAddToCart,handleAddTotalCredit}) => {
     // console.log(course)
     const {course_title,course_img,credit_Hour,course_fee,course_information} = course;
     return (
@@ -17,7 +17,8 @@ const Course = ({course,handleAddToCart}) => {
                 <p>Credit: {credit_Hour} hr</p>
             </div>
             <button
-            onClick={handleAddToCart}
+            onClick={() => {handleAddToCart(course);handleAddTotalCredit(credit_Hour)}}
+            
             className='w-11/12 items-center bg-blue-600 text-lg font-semibold py-2 rounded-lg text-white mt-6'>
                 Select
                 </button>
@@ -28,5 +29,7 @@ const Course = ({course,handleAddToCart}) => {
 
 Course.propTypes = {
     course: PropTypes.object.isRequired,
+    handleAddToCart: PropTypes.func,
+    handleAddTotalCredit: PropTypes.func,
 }
 export default Course;

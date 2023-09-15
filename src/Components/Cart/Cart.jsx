@@ -1,22 +1,37 @@
+import PropTypes, { number } from 'prop-types'
+import Cart_Item from '../Cart_Item/Cart_Item';
 
-const Cart = () => {
+
+const Cart = ({carts,credit}) => {
+    // console.log(carts)
     return (
-        <div className="w-1/4 p-3">
-            <div className="bg-white w-[312px]  grid gap-4 p-6">
+
+        <div className="bg-white w-[312px] flex flex-col mt-7 rounded-lg h-max gap-4 p-6"> 
             <h2 className="text-[#2F80ED] text-lg font-bold">
             Credit Hour Remaining 7 hr
             </h2>
             <hr />
-            <h2 className=" text-[20px] font-bold mb-1">
-                Course Name
-            </h2>
-            <hr />
-            <h3 className="text-base font-semibold text-[#1C1B1B99]">Total Credit Hour: </h3>
+            <div className=" text-[20px] font-bold mb-1">
+                Course Name 
+                <h2 className='text-base font-normal text-[#1C1B1B99]'>
+                    {
+                        carts.map(cart => <Cart_Item key={cart.id} cart={cart}></Cart_Item>)
+                    }
+                </h2>
+            </div>
+            <h3 className="text-base font-semibold text-[#1C1B1B99]">Total Credit Hour: {credit}
+            </h3>
             <hr />
             <h2 className="text-base font-semibold text-[#1C1B1B99]">Total Price:{} USD</h2>
-            </div>
-        </div>
+            </div> 
+        
     );
 };
+
+Cart.propTypes =
+{
+    carts: PropTypes.array.isRequired,
+    credit: number,
+}
 
 export default Cart;
