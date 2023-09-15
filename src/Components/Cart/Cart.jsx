@@ -1,14 +1,14 @@
-import PropTypes, { number } from 'prop-types'
+import PropTypes from 'prop-types'
 import Cart_Item from '../Cart_Item/Cart_Item';
 
 
-const Cart = ({carts,credit}) => {
+const Cart = ({carts,credit,remainingCreditHour}) => {
     // console.log(carts)
     return (
 
         <div className="bg-white w-[312px] flex flex-col mt-7 rounded-lg h-max gap-4 p-6"> 
             <h2 className="text-[#2F80ED] text-lg font-bold">
-            Credit Hour Remaining 7 hr
+            Credit Hour Remaining {remainingCreditHour} hr
             </h2>
             <hr />
             <div className=" text-[20px] font-bold mb-1">
@@ -31,7 +31,8 @@ const Cart = ({carts,credit}) => {
 Cart.propTypes =
 {
     carts: PropTypes.array.isRequired,
-    credit: number,
+    credit: PropTypes.number,
+    remainingCreditHour: PropTypes.number
 }
 
 export default Cart;

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 
 
-const Courses = ({handleAddToCart,handleAddTotalCredit}) => {
+const Courses = ({handleAddToCart}) => {
     const [courses, setCourses] = useState([]);
 
     useEffect(()=>{
@@ -25,7 +25,6 @@ const Courses = ({handleAddToCart,handleAddTotalCredit}) => {
                 key={course.id}
                 course={course}
                 handleAddToCart={handleAddToCart}
-                handleAddTotalCredit={handleAddTotalCredit}
                 ></Course>)
         }
         </div>
@@ -35,6 +34,5 @@ const Courses = ({handleAddToCart,handleAddTotalCredit}) => {
 
 Courses.propTypes = {
     handleAddToCart: PropTypes.func,
-    handleAddTotalCredit: PropTypes.func,
 }
 export default Courses;

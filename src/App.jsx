@@ -7,17 +7,43 @@ function App() {
 
   const [carts, setCarts] = useState([]);
   const [credit, setCredit] = useState(0);
+  const [remainingCreditHour, setRemainingHour] = useState(20);
   const handleAddToCart = course =>
   {
-    // console.log(course)
-    const newCart = [...carts, course];
-    setCarts(newCart);
+    const isExists = carts.find((lessons)=> lessons.id== course.id);
+    if(isExists)
+    {
+      alert("You already selected this Course");
+    }
+    else
+    {
+      const newCart = [...carts, course];
+      handleAddTotalCredit(course.credit_Hour)
+      handleRemainingCredit(course.credit_Hour);
+      setCarts(newCart);
+    }
   }
-
-  const handleAddTotalCredit = credit_Hour =>
+  const handleAddTotalCredit = (credit_Hour) =>
   {
     const newCreditHour = credit+credit_Hour;
+    if(newCreditHour>20)
+    {
+      alert("Maximum Credit Reached")
+    }
+    else{
       setCredit(newCreditHour);
+    }
+  }
+  const handleRemainingCredit = (credit_Hour) =>
+  {
+    const newCreditHourRemain = remainingCreditHour - credit_Hour;
+    if(newCreditHourRemain<0)
+    {
+      alert("You can not enroll at any course,You are already filled up your credits")
+    }
+    else{
+      setRemainingHour(newCreditHourRemain)
+    }
   }
 
   return (
@@ -35,6 +61,7 @@ function App() {
       <Cart 
       carts={carts}
       credit = {credit}
+      remainingCreditHour = {remainingCreditHour}
       ></Cart>
     </main>
     </div>
