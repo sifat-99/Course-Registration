@@ -8,6 +8,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   const [credit, setCredit] = useState(0);
   const [remainingCreditHour, setRemainingHour] = useState(20);
+  const [cost, setCost] = useState(0);
   const handleAddToCart = course =>
   {
     const isExists = carts.find((lessons)=> lessons.id== course.id);
@@ -18,12 +19,12 @@ function App() {
     else
     {
       const newCart = [...carts, course];
-      handleAddTotalCredit(course.credit_Hour)
+      handleAddTotalCredit(course.credit_Hour,course.course_fee)
       handleRemainingCredit(course.credit_Hour);
       setCarts(newCart);
     }
   }
-  const handleAddTotalCredit = (credit_Hour) =>
+  const handleAddTotalCredit = (credit_Hour,credit_cost) =>
   {
     const newCreditHour = credit+credit_Hour;
     if(newCreditHour>20)
@@ -32,6 +33,7 @@ function App() {
     }
     else{
       setCredit(newCreditHour);
+      handelTotalCost(credit_cost)
     }
   }
   const handleRemainingCredit = (credit_Hour) =>
@@ -44,6 +46,11 @@ function App() {
     else{
       setRemainingHour(newCreditHourRemain)
     }
+  }
+  const handelTotalCost = course_fee =>
+  {
+    const newCost = cost+course_fee;
+    setCost(newCost)
   }
 
   return (
@@ -62,6 +69,7 @@ function App() {
       carts={carts}
       credit = {credit}
       remainingCreditHour = {remainingCreditHour}
+      cost={cost}
       ></Cart>
     </main>
     </div>
