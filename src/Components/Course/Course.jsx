@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {BiBookOpen} from 'react-icons/bi';
+import { ToastContainer } from 'react-toastify';
 const Course = ({course,handleAddToCart}) => {
     // console.log(course)
     const {course_title,course_img,credit_Hour,course_fee,course_information} = course;
@@ -18,12 +19,13 @@ const Course = ({course,handleAddToCart}) => {
             </div>
             <button
             onClick={() => {handleAddToCart(course)}}
-            
             className='w-11/12 items-center bg-blue-600 text-lg font-semibold py-2 rounded-lg text-white mt-6'>
                 Select
                 </button>
+                <ToastContainer></ToastContainer>
             </div>
         </div>
+        
     );
 };
 

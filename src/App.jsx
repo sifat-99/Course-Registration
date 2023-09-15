@@ -1,7 +1,10 @@
-import './App.css'
-import Courses from './Components/Courses/Courses'
-import Cart from './Components/Cart/Cart'
-import { useState } from 'react'
+import './App.css';
+import Courses from './Components/Courses/Courses';
+import Cart from './Components/Cart/Cart';
+import { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
 
@@ -14,7 +17,16 @@ function App() {
     const isExists = carts.find((lessons)=> lessons.id== course.id);
     if(isExists)
     {
-      alert("You already selected this Course");
+      toast.error('You already selected this course', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
     else
     {
@@ -29,7 +41,16 @@ function App() {
     const newCreditHour = credit+credit_Hour;
     if(newCreditHour>20)
     {
-      alert("Maximum Credit Reached")
+      toast.error('Maximum Credit Reached', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
     else{
       setCredit(newCreditHour);
@@ -41,7 +62,16 @@ function App() {
     const newCreditHourRemain = remainingCreditHour - credit_Hour;
     if(newCreditHourRemain<0)
     {
-      alert("You can not enroll at any course,You are already filled up your credits")
+      toast.error('You can not enroll at any course,You are already filled up your credits', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     }
     else{
       setRemainingHour(newCreditHourRemain)
@@ -52,7 +82,6 @@ function App() {
     const newCost = cost+course_fee;
     setCost(newCost)
   }
-
   return (
     <div className='mx-auto max-w-[1440px] justify-evenly'>
         <header className='flex items-center justify-center'>
@@ -60,7 +89,7 @@ function App() {
             Course Registration
           </h1>
           </header>
-      <main className=' md:flex'>
+      <main className='flex flex-col-reverse md:flex lg:flex-row mx-auto px-10 justify-center items-center lg:items-start'>
       <Courses 
       handleAddToCart={handleAddToCart}
       handleAddTotalCredit={handleAddTotalCredit}
