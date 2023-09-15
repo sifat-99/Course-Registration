@@ -14,8 +14,8 @@ function App() {
   const [cost, setCost] = useState(0);
   const handleAddToCart = course =>
   {
-    const isExists = carts.find((lessons)=> lessons.id== course.id);
-    if(isExists)
+    const isExists = carts?.find((lessons)=>lessons.id== course.id);
+    if(isExists || credit >=20 || course.credit_Hour >remainingCreditHour)  
     {
       toast.error('You already selected this course', {
         position: "top-center",

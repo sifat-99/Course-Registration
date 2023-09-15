@@ -4,9 +4,9 @@ import PropTypes from 'prop-types'
 const Cart_Item = ({cart}) => {
     const {course_title} = cart;
     return (
-        <div>
-            <h1>{course_title}</h1>
-        </div>
+            
+                <li>{course_title}</li>
+            
     )
 }
 

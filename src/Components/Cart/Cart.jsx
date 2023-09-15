@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
-import Cart_Item from '../Cart_Item/Cart_Item';
 
 
 const Cart = ({carts,credit,remainingCreditHour,cost}) => {
-    // console.log(carts)
+    const itemList = carts.map((course, index) => (
+        <li key={index}>{course.course_title}</li>
+        ));
     return (
 
         <div className="bg-white w-[312px] flex flex-col mt-7 rounded-lg h-max gap-4 p-6"> 
@@ -13,11 +14,11 @@ const Cart = ({carts,credit,remainingCreditHour,cost}) => {
             <hr />
             <div className=" text-[20px] font-bold mb-1">
                 Course Name 
-                <h2 className='text-base font-normal text-[#1C1B1B99]'>
-                    {
-                        carts.map(cart => <Cart_Item key={cart.id} cart={cart}></Cart_Item>)
-                    }
-                </h2>
+                <div>
+                    <ol className='text-base list-decimal pl-4 font-normal text-[#1C1B1B99] mb-2'>
+                        {itemList}
+                    </ol>
+                </div>
             </div>
             <h3 className="text-base font-semibold text-[#1C1B1B99]">Total Credit Hour: {credit}
             </h3>
