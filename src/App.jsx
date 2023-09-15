@@ -17,16 +17,32 @@ function App() {
     const isExists = carts?.find((lessons)=>lessons.id== course.id);
     if(isExists || credit >=20 || course.credit_Hour >remainingCreditHour)  
     {
-      toast.error('You already selected this course', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        });
+      if(course.credit_Hour>remainingCreditHour)
+      {
+        toast.error('No more space for this course, this course has more than your remaining credit.', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      }
+      else
+      {
+        toast.error('You already selected this course', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
+      }
     }
     else
     {
